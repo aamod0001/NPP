@@ -3,20 +3,21 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 
-function hello_world() {
+function HelloWorld() {
   return ( <h1>Hello world </h1> )
 }
 
 
 
-function App() {
+export default function App() {
   const [count, setCount] = useState(0)
   
   
   return (
     <>
-        <h1> hello world </h1>
-        <div className="card">
+      <HelloWorld />
+      <HelloWorld />
+      <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
         </button>
@@ -27,8 +28,10 @@ function App() {
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>
+      <div>
+        <button className="square">X</button>
+      </div>
     </>
   )
 }
 
-export default App
